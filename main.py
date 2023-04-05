@@ -6,7 +6,9 @@ from pyspark import SparkContext, SparkConf
 import os
 import pandas as pd
 import warnings
-from etl_pyspark import reader_csv,jdbc_dataset_example,reader_table
+
+"""Imports das funções de chamadas das tabelas"""
+from etl_pyspark import reader_csv,executa_consulta_tabela1,reader_table,executa_consulta_tabela2
 
 warnings.filterwarnings('ignore')
 
@@ -43,7 +45,8 @@ if __name__=='__main__':
     
     reader_csv(spark)
 
-    jdbc_dataset_example(spark)
+    executa_consulta_tabela1(spark)
+    executa_consulta_tabela2(spark)
     reader_table(spark)
 
 

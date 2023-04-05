@@ -32,7 +32,8 @@ def reader_csv(spark: SparkSession) -> None:
     spark.sql("INSERT INTO TABLE produtos  SELECT * FROM ProdutosView")
 
 
-def jdbc_dataset_example(spark: SparkSession) -> None:
+def executa_consulta_tabela1(spark: SparkSession) -> None:
+    """Faz a consulta da tabela e salva em um Parquet na pasta spark-wareHouse"""
 
     jdbcDF = spark.read \
         .format("jdbc") \
@@ -49,6 +50,25 @@ def jdbc_dataset_example(spark: SparkSession) -> None:
     jdbcDF.write.mode('overwrite') \
          .saveAsTable(tabela)
     
+def executa_consulta_tabela2(spark: SparkSession) -> None:
+    """Faz a consulta da tabela e salva em um Parquet na pasta spark-wareHouse"""
+
+    jdbcDF = spark.read \
+        .format("jdbc") \
+        .option("url", url) \
+        .option('driver', 'com.microsoft.sqlserver.jdbc.SQLServerDriver')\
+        .option("header", "true") \
+        .option("inferSchema", "true") \
+        .option("dbtable", tabela) \
+        .option("user", user) \
+        .option("password", password)\
+        .load()
+    
+
+    jdbcDF.write.mode('overwrite') \
+         .saveAsTable(tabela)
+    
+
    
 
     df = spark.read.table(tabela)
