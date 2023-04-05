@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Apr 05 00:07:57 BRT 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0187-4f62-a3af-00000395a280 
+on database directory C:\estimadoresteste\ETL_py_spark_rev5\metastore_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
+Loaded from file:/C:/databases_Etl/venv/Lib/site-packages/pyspark/jars/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=19.0.2+7-44
+user.dir=C:\estimadoresteste\ETL_py_spark_rev5
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
