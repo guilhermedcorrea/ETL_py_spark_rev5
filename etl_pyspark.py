@@ -16,8 +16,6 @@ tabela = os.getenv('table')
 url = os.getenv('URI_BI')
 
 
-header='True',
-
 
 def reader_csv(spark: SparkSession) -> None:
     df = spark.read.option("inferSchema",True) \
