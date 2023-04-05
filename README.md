@@ -10,6 +10,8 @@
 e a jars "C:\estimadoresteste\ETL_py_spark_rev5\venv\Lib\site-packages\pyspark\jars"<br/>
 
 
+<b> link winutils.exe https://github.com/cdarlint/winutils</b>
+
 <br> Depois fazer o download o "Winutils.exe" referente a versao do spark e criar dentro da pasta do pyspark uma pasta chamada hadoop e dentro dela uma pasta chamada bin e dentro da bin coloca o winutils.exe e o hadoop.dll</br>
 
 
